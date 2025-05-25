@@ -1,0 +1,253 @@
+/* vesper Libre*/
+@import url('https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700;900&display=swap');
+/* viaoda Libre*/
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+* {
+    user-select: none;
+    cursor: url('../images/cursor.png'), auto !important;
+}
+
+a {
+    cursor: url('../images/cursor_link.png'), pointer !important;
+}
+
+:root {
+    --multiplier: 1;
+    --scale: 0.3;
+    --main-text: #59150F;
+}
+
+h3,
+h2,
+a,
+p {
+    color: var(--main-text);
+}
+
+section h3,
+header,
+body,
+section,
+nav,
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: calc(96px * var(--scale));
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: calc(50px * var(--scale));
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section p {
+    padding: 0;
+    padding-top: 15%;
+    padding-left: 35%;
+    font-size: calc(30px * var(--scale));
+    margin: 0;
+}
+
+header h1 {
+    display: none;
+    /* SEO */
+}
+
+header img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+
+    line-height: 107%;
+    font-size: calc(35px* var(--scale));
+    color: var(--main-text);
+    text-transform: uppercase;
+}
+
+body {
+    flex-direction: column;
+    background-image: url('../images/old_paper.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section {
+    flex-direction: column;
+}
+
+section:not(#home, #shop):before {
+    --width: 190px;
+    content: '';
+    background: url(../images/IMG_1706.PNG);
+    width: calc(var(--width) * 1.8);
+    height: var(--width);
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h4 {
+    font-size: calc(40px * var(--scale));
+}
+
+nav {
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+nav a:not(:last-child)::after {
+    content: "|";
+    margin: 8px;
+}
+
+.vesper-libre-regular,
+a,
+h4 {
+    font-family: "Vesper Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.vesper-libre-medium {
+    font-family: "Vesper Libre", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.vesper-libre-bold {
+    font-family: "Vesper Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.vesper-libre-black {
+    font-family: "Vesper Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.viaoda-libre-regular,
+h3,
+h2,
+.section p {
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h3::before,
+h3::after {
+    content: "";
+    display: inline-flex;
+    width: max-content;
+    border-bottom: 3px solid var(--main-text);
+    height: 0px;
+    width: 20vw;
+    margin: 0px 24px;
+}
+
+@media (min-width:320px) {
+    :root {
+        --scale: 0.5;
+    }
+
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+
+@media (min-width:480px) {
+    :root {
+        --scale: 0.75;
+    }
+
+    /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width:600px) {
+    :root {
+        --scale: 0.9;
+    }
+
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width:801px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    :root {
+        --multiplier: 0.8;
+    }
+}
+
+@media (min-width:1025px) {
+    :root {
+        --scale: 0.8;
+    }
+
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+}
+
+footer {
+    --size: calc(var(--scale) * 0.5);
+    background-color: #59150F;
+    width: 100%;
+    color: #FAF0DE;
+}
+
+footer p img,
+footer a img {
+    height: unset;
+    max-height: calc(35px* var(--size));
+    width: unset;
+    position: absolute;
+    transform: translateX(calc(-100% - 8px));
+}
+
+footer .search {
+    color: var(--main-text);
+    background-color: #FAF2DE;
+    width: 100%;
+    height: calc(43px * var(--scale) + 8px);
+    border-radius: 23.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: calc(23.5px / 2);
+    margin-left: 8px;
+}
+
+footer .search img {
+    max-height: calc(35px* var(--size));
+}
+
+.contact>* {
+    margin: auto;
+    margin-left: calc(35px * var(--size));
+}

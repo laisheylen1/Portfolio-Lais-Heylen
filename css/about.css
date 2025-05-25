@@ -1,0 +1,51 @@
+section .images {
+    display: flex;
+    flex-direction: column;
+}
+
+.images img {
+    width: 100vw;
+    scale: 0.8;
+}
+
+@media (min-width:1140px) {
+    .images img {
+        scale: var(--multiplier);
+    }
+
+    .images img:nth-child(1) {
+        position: relative;
+        width: unset;
+        height: 100vh;
+        scale: 1;
+    }
+
+    .images img:nth-child(2) {
+        position: relative;
+        width: 50vw;
+        left: 20vw;
+    }
+
+    .images img:nth-child(3) {
+        position: relative;
+        width: 35vw;
+        right: 20vw;
+    }
+
+    .images img:nth-child(4) {
+        position: relative;
+        width: 50vw;
+        left: 20vw;
+    }
+
+    .images img:nth-child(5) {
+        position: relative;
+        width: 30vw;
+        right: 15vw;
+    }
+
+    .images img:nth-child(6) {
+        position: relative;
+        width: 45vw;
+    }
+}
